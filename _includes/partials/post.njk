@@ -1,0 +1,20 @@
+{%set item = post | d(collections.all | getCollectionItem(page))%}
+
+<div class="post">
+    <div class="metadata">
+        <div class="author">{{item.data.author}}</div>
+        <div class="timestamp">{{item.data.timestamp}}</div>
+    </div>
+    <a href={{item.url}}>
+        <h1 class="title">{{item.data.title}}</h1>
+    </a>
+    <div class="postbody">{{item.content | safe }}</div>
+    <div class="tags">
+        {%- for tag in item.tags | filterTagList %}{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+            <li>
+                <a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>
+                {%- if not loop.last %}, {% endif %}
+            </li>
+        {%- endfor %}
+    </div>
+</div>

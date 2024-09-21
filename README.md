@@ -6,6 +6,8 @@
 ## Github repo setup
 
 1. At the top of this repo, click on the "Use this template" dropdown and choose "Create a new repository". Give the repo a name and make note of the resulting HTTPS URL: it should look something like `https://github.com/${your username}/${the repo name}`. You'll be collecting more things in your notes to go along with this.
+2. Edit the \_data/metadata.js file to set up the website's metadata. This is used in things like the RSS feed / page template OpenGraph tags. If you don't change these, things WILL look broken/silly to people who see your site elsewhere on the web.
+3. You probably should go into the `content/` directory and remove the `intro.md` file. You can do that whenever you like though!
 
 ## GitHub app setup
 

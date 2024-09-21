@@ -1,8 +1,10 @@
+// NOTE: you really should override _all_ of these fields!
+// ...except maybe the language one if you're mostly writing in English I suppose
 module.exports = {
-	title: "Eleventy Base Blog v8",
-	url: "https://example.com/",
+	title: "Octobug Template",
+	url: "https://github.com/top-ghost/octobug",
 	language: "en",
-	description: "I am writing about my experiences as a naval navel-gazer.",
+	description: "Just setting up my Octobug",
 	author: {
 		name: "Your Name Here",
 		email: "youremailaddress@example.com",
