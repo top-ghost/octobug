@@ -54,7 +54,9 @@ at this point Github should start running a Github Pages deploy; if it succeeds 
 
 Octobug will eventually provide a light customization of the `eleventy-base-blog` template to more closely match the Cohost profile experience but you can do whatever you want at this point to work with your repo as you would any Eleventy app.
 
-You can even post manually, if you want more control over the post or if you want to include media while we're not yet supporting that in the web interface. Just add files to the `content` directory the way you would a regular Eleventy app. When you push to the repo you should still get
+You can even post manually, if you want more control over the post or if you want to include media while we're not yet supporting that in the web interface. Just add files to the `content` directory the way you would a regular Eleventy app. When you push to the repo you should still get a full Eleventy build sent to the gh-pages branch, and GitHub should publish that to your GitHub Pages hosted site.
+
+While you're experimenting, since it's just a static Eleventy site, you can make use of a node.js-ready development environment to run `npx @11ty/eleventy --serve` and see your changes locally. Then push your changes back to your GitHub repo to publish it to your site.
 
 Change things in the eleventy.config.js file! Add plugins in package.json! Update the templates and default page structures in `_includes` and `content`! The world is your oyster. You'll need to make sure that the contents of `/public/octobug` pass through to your built site in order to post from the web, obviously, but you can even customize those files in order to change the posting interface to your heart's content to include additional post metadata fields that you then can make use of in your 11ty layouts.
 
