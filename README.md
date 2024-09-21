@@ -5,12 +5,12 @@
 
 ## Github repo setup
 
-1. At the top of this repo, click on the "Use this template" dropdown and choose "Create a new repository". Give the repo a name and make note of the resulting HTTPS URL: it should look something like "https://github.com/${your username}/${the repo name}". You'll be collecting more things in your notes to go along with this.
+1. At the top of this repo, click on the "Use this template" dropdown and choose "Create a new repository". Give the repo a name and make note of the resulting HTTPS URL: it should look something like `https://github.com/${your username}/${the repo name}`. You'll be collecting more things in your notes to go along with this.
 
 ## GitHub app setup
 
-1. Go to Settings -> at the bottom, select "Developer settings"
-2. Click on "New GitHub App" in the top right corner
+1. Go to Settings -> at the bottom, select "Developer settings".
+2. Click on "New GitHub App" in the top right corner.
 3. Give it a name and URL (these don't really matter, but you'll need to find it by name later). Generate the app.
 4. on the app's "General" page (you should have been sent there after the app was created),
    make note of the "App ID" near the top of the page in the same place you stored the repo URL.
@@ -24,7 +24,7 @@
 Github provides your App's Private Key as a PKCS#1 format .pem file.
 To authenticate with their REST API, they require your private key as a string in PKCS#8 format. So that's cool.
 
-For now you'll need access to the command line to do this next step; hopefully we can streamline this process eventually, but for now run:
+For now you'll need access to a Linux or macOS command line to do this next step; hopefully we can streamline this process eventually and make it accessible for (non-WSL) Windows users, but for now run:
 
 ```
 openssl pkcs8 -topk8 -inform PEM -outform PEM -in filename -out filename -nocrypt | awk 1 ORS='\\n'
@@ -34,12 +34,15 @@ if you're on macOS you can add ` | pbcopy` at the end to copy the result to your
 
 ## Github Pages setup
 
-Go to your repo's Settings page and in the left sidebar click on "Pages" under "Code and automation". Select "Deploy from a branch" under "Source", then under "Branch" select "gh-pages" in the dropdown. "/ (root)" should be fine for the directory. Hit "Save".
+Go to your repo's Settings page and in the left sidebar click on "Pages" under "Code and automation". Select "Deploy from a branch" under "Source", then under "Branch" select `gh-pages` in the dropdown. `/ (root)` should be fine for the directory. Hit "Save".
 
 > [!NOTE]
 > If you don't see that branch listed, the Github Action probably didn't run correctly after you cloned the repo. Go to the repo's Actions tab, find the most recent `Eleventy Build` run, and look for errors. (Hopefully there will be more assistance for you eventually! Sorry!)
 
 at this point Github should start running a Github Pages deploy; if it succeeds it should show you the deployed `github.io` URL. If you're happy with how it looks you can follow GitHub's guidelines for adding a custom domain to your site, or else you can just use the provided subdomain/directory.
+
+> [!IMPORTANT]
+> If you're not planning on setting up a custom domain, that means your site will live in a subdirectory of your GitHub account's `github.io` subdomain. Eleventy by default assumes that sites using it will be at the root of the domain; to fix this you will need to edit the `eleventy.config.js` file and follow the directions [on this page](https://www.11ty.dev/docs/config/#deploy-to-a-subdirectory-with-a-path-prefix).
 
 ## Posting
 
