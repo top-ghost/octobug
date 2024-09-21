@@ -1,6 +1,6 @@
 ## Github repo setup
 
-1. Clone this repo. Make note of the resulting HTTPS URL, it should look something like
+1. Use this repo as a "template" to make a new repo where your site will actually live. Make note of the resulting HTTPS URL, it should look something like
    "https://github.com/${your username}/${the repo name}". You'll be collecting more things in your notes to go along with this.
 
 ## GitHub app setup
