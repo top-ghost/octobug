@@ -28,17 +28,18 @@ function authorize() {
 function makePost(postAuthor, {postTitle, postTimestamp, postBody, postTagsRawString}) {
   const tagArray = postTagsRawString.split(',').map((t) => t.trim());
 
-  return `
----json
+  return `---json
 ${JSON.stringify({
   author: postAuthor,
+  date: "Git created",
   title: postTitle,
   timestamp: postTimestamp,
-  tags: tagArray
+  tags: tagArray,
+  layout: "layouts/post.njk"
 })}
 ---
 ${postBody}
-  `;
+`;
 }
 
 window.addEventListener("DOMContentLoaded", async () => {
