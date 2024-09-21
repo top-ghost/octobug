@@ -22,6 +22,7 @@
   - draft option in posting interface
   - enhance octobug static web app to fetch drafts from repo & edit/post them
 - tighten up posting interface styling
+- use [cohost web component](https://cohost-web-component.meow.garden/) for post rendering?
 - maybe store posts in better structure instead of a big pile of unix timestamps in the `content` subdirectory?
 - media upload to S3-like storage (just inserts the correct markup into the post field like Github's drag-and-drop)
 - web interface for setting "profile" fields (display name, bio, avatar?)
