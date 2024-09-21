@@ -42,7 +42,7 @@ Go to your repo's Settings page and in the left sidebar click on "Pages" under "
 at this point Github should start running a Github Pages deploy; if it succeeds it should show you the deployed `github.io` URL. If you're happy with how it looks you can follow GitHub's guidelines for adding a custom domain to your site, or else you can just use the provided subdomain/directory.
 
 > [!IMPORTANT]
-> If you're not planning on setting up a custom domain, that means your site will live in a subdirectory of your GitHub account's `github.io` subdomain. Eleventy by default assumes that sites using it will be at the root of the domain; to fix this you will need to edit the `eleventy.config.js` file and follow the directions [on this page](https://www.11ty.dev/docs/config/#deploy-to-a-subdirectory-with-a-path-prefix).
+> If you're not planning on setting up a custom domain, that means your site will live in a subdirectory of your GitHub account's `github.io` subdomain. Eleventy by default assumes that sites using it will be at the root of the domain; to fix this you will need to edit the `eleventy.config.js` file, find the line near the bottom that reads `pathPrefix: '/'`, and update it to read `pathPrefix: '/your-repo-name'`.
 
 ## Posting
 
