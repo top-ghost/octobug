@@ -5,6 +5,11 @@
 - move secrets setting stuff into separate page linked from post page
 - make secrets setting submit show whether it succeeded or failed
 - make post interface show whether it succeeded or failed and clear the form
+- validate post fields
+- validate secret fields
+
+# SOMEDAY
+
 - delete post from web interface
   - customize eleventy to check localstorage
   - if it exists embed buttons in forms that POST to github API
@@ -13,11 +18,6 @@
   - if it exists redirect to posting interface
   - include some parameters that cause the interface to fetch the post's content from GitHub and pre-populate the posting form fields
   - pre-populate the path field with the existing timestamped filename
-- validate post fields
-- validate secret fields
-
-# SOMEDAY
-
 - support for drafting posts
   - draft option in posting interface
   - enhance octobug static web app to fetch drafts from repo & edit/post them

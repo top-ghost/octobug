@@ -52,6 +52,7 @@ at this point Github should start running a Github Pages deploy; if it succeeds 
    b. you can post to different blogs without having to log out / back in!
 3. You can also set a post author name. This is mostly a hack right now; I'm hoping to support multiple authors on a single blog at some point and that metadata will theoretically be set via some kind of split credential or come via the git metadata or something like that. But for now you can impersonate whoever you want, create multiple identities, etc.
 4. Once the stuff in the Secrets form has been set up successfully (right now you need to verify that by making a post, but there will be some kind of visual indication on the page in the future), you're ready to start posting! You can ignore the Secrets form and just use the Post form.
+5. For now, if you need to edit or delete a post, you can do that from the GitHub repo's web interface. It works okay! We'll add a way to do it on the site itself eventually.
 
 ## Now do Eleventy things
 
