@@ -5,7 +5,7 @@
 	"scripts": {
 		"build": "npx @11ty/eleventy",
 		"build-ghpages": "npx @11ty/eleventy --pathprefix=/eleventy-base-blog/",
-		"start": "npx @11ty/eleventy --serve --quiet",
+		"start": "npx @11ty/eleventy --serve --quiet --port=5080",
 		"debug": "DEBUG=Eleventy* npx @11ty/eleventy",
 		"debugstart": "DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
 		"benchmark": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy"
@@ -17,7 +17,7 @@
 	},
 	"license": "MIT",
 	"engines": {
-		"node": ">=14"
+		"node": ">=18"
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^2.0.1",
