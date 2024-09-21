@@ -1,7 +1,11 @@
+# Octobug
+
+> [!WARNING]
+> This project and its README are not currently very accessible-- I'm writing with a baseline assumption of proficiency with things like Git, GitHub, Eleventy, and probably some other things. If people are actually interested in the project, we'll make it better with time. Thanks for your patience and/or help!
+
 ## Github repo setup
 
-1. Use this repo as a "template" to make a new repo where your site will actually live. Make note of the resulting HTTPS URL, it should look something like
-   "https://github.com/${your username}/${the repo name}". You'll be collecting more things in your notes to go along with this.
+1. At the top of this repo, click on the "Use this template" dropdown and choose "Create a new repository". Give the repo a name and make note of the resulting HTTPS URL: it should look something like "https://github.com/${your username}/${the repo name}". You'll be collecting more things in your notes to go along with this.
 
 ## GitHub app setup
 
@@ -45,3 +49,13 @@ at this point Github should start running a Github Pages deploy; if it succeeds 
    b. you can post to different blogs without having to log out / back in!
 3. You can also set a post author name. This is mostly a hack right now; I'm hoping to support multiple authors on a single blog at some point and that metadata will theoretically be set via some kind of split credential or come via the git metadata or something like that. But for now you can impersonate whoever you want, create multiple identities, etc.
 4. Once the stuff in the Secrets form has been set up successfully (right now you need to verify that by making a post, but there will be some kind of visual indication on the page in the future), you're ready to start posting! You can ignore the Secrets form and just use the Post form.
+
+## Now do Eleventy things
+
+Octobug will eventually provide a light customization of the `eleventy-base-blog` template to more closely match the Cohost profile experience but you can do whatever you want at this point to work with your repo as you would any Eleventy app.
+
+You can even post manually, if you want more control over the post or if you want to include media while we're not yet supporting that in the web interface. Just add files to the `content` directory the way you would a regular Eleventy app. When you push to the repo you should still get
+
+Change things in the eleventy.config.js file! Add plugins in package.json! Update the templates and default page structures in `_includes` and `content`! The world is your oyster. You'll need to make sure that the contents of `/public/octobug` pass through to your built site in order to post from the web, obviously, but you can even customize those files in order to change the posting interface to your heart's content to include additional post metadata fields that you then can make use of in your 11ty layouts.
+
+Think you might have an improvement to the posting interface that would be widely applicable? Fork this project (a clean copy, not your template with your own `/content` folder) and let people use your version as a template, or send patches upstream (though I can offer no guarantees on how regularly I will be able to respond to these!)
