@@ -7,6 +7,7 @@
 - make post interface show whether it succeeded or failed and clear the form
 - validate post fields
 - validate secret fields
+- make PWA-ready so it can be on the home screen
 
 # SOMEDAY
 
