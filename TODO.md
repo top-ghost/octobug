@@ -1,16 +1,21 @@
 # MVP
 
 - BASIC layout for "settings" page
-- BASIC layout for "post" page
-- move secrets setting stuff into separate page linked from post page
+- have some images somewhere?
+- add a page footer with useful links
+- hardcoded profile in 11ty template
+  - links, email address, 88x31s, blogroll?
 - make secrets setting submit show whether it succeeded or failed
 - make post interface show whether it succeeded or failed and clear the form
 - validate post fields
+  - use tag JS / form field from postmarks tags
 - validate secret fields
 - make PWA-ready so it can be on the home screen
 
 # SOMEDAY
 
+- use GitHub API to fetch Octokit repo basics, indicate that all secrets have been configured correctly & site is operational for posting
+- use GitHub API to fetch Actions build status, update page & redirect when site has been updated
 - delete post from web interface
   - customize eleventy to check localstorage
   - if it exists embed buttons in forms that POST to github API
@@ -34,6 +39,6 @@
 
 # DREAMSCAPE
 
-- some kind of lightweight redis-like "likes" feed.
+- some kind of lightweight redis(?)-like "likes" feed.
   - localstorage-powered eleventy page menu to send me your name when you hit like
 - multi-author support? (how to verify?)
